@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="container">
+  {% if page.hero_image %}
+  <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt | default: page.title }}" class="hero-img">
+  {% endif %}
+</div>
+
+<div class="container about-layout">
+  <div class="about-text">
+    {{ content }}
+  </div>
+</div>

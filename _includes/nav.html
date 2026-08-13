@@ -14,7 +14,18 @@
       </div>
     </div>
 
+    <div class="dropdown">
+      <button class="dropbtn">Pottery ▾</button>
+      <div class="dropdown-content">
+        <a href="{{ '/snakes.html' | relative_url }}">Snakes</a> 
+      </div>
+    </div>
+
     <a href="{{ '/cv.html' | relative_url }}" {% if page.url == '/cv.html' %}class="active"{% endif %}>CV</a>
     <a href="{{ '/contact.html' | relative_url }}" {% if page.url == '/contact.html' %}class="active"{% endif %}>Contact</a>
   </nav>
 </header>
+
+
+
+snakes.html
