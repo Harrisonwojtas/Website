@@ -2,16 +2,63 @@
 layout: art_project
 title: Snakes
 description: Ceramic snake sculptures by Harry Wojtas, Sitka Alaska.
-bg_color: "#FDFBD4"
-hero_image: /Images/ceramics/snakes/Snake.JPEG
+hero_image: /Images/ceramics/Portland/heads.JPG
 hero_alt: Ceramic snake sculpture
 extra_css: |
-  h1, h2 { color: #6E1F0F; }
-  a { color: #0F5E6E; }
-  a:hover { color: #05472A; }
-  .hero-img { border: 4px solid #05472A; }
-  .about-text { border-left: 4px solid #0F5E6E; padding-left: 20px; }
+  /* Outer margins - forest green */
+  body { background-color: #05472A; }
+
+  /* Name panel, nav bar, bottom panel - maroon with forest green text */
+  header, footer {
+    background-color: #6E1F0F;
+  }
+  .site-title a,
+  nav a,
+  .dropbtn,
+  footer a {
+    color: #05472A;
+  }
+  nav a:hover,
+  footer a:hover {
+    color: #FDFBD4;
+  }
+
+  /* Dropdown menu - cream panel, black text, since it's a popover panel */
+  .dropdown-content {
+    background-color: #FDFBD4;
+  }
+  .dropdown-content a {
+    color: #000000;
+  }
+  .dropdown-content a:hover {
+    background-color: #05472A;
+    color: #FDFBD4;
+  }
+
+  /* Center content column - cream with black text */
+  .container {
+    background-color: #FDFBD4;
+    color: #000000;
+  }
+  .container h1,
+  .container h2,
+  .container p {
+    color: #000000;
+  }
+
+  /* Hero image - forest green border and hover stays forest green */
+  .hero-img {
+    border: 4px solid #05472A;
+  }
+  .container a {
+    color: #0F5E6E;
+  }
+  .container a:hover {
+    color: #05472A;
+  }
 ---
+<h1>Reptiles and Clay</h1>
 <p>
-  Welcome to my art website!
+  Welcome to my art website! Here you can find my latest snake inspired pieces.
+
 </p>
