@@ -1,0 +1,33 @@
+
+
+1. Create a new `.html` file at the root, e.g. `sculpture.html`
+2. Add front matter at the top:
+   ```
+   ---
+   layout: default
+   title: Sculpture
+   description: One sentence for search engines and social previews.
+   gallery: true   <!-- only if this page has a .gallery-img gallery -->
+   ---
+   ```
+3. Write your content below the `---`. No `<html>`, `<head>`, nav, or
+   footer needed — the layout adds those automatically.
+4. Add a link to it in `_includes/nav.html` if it should appear in the menu.
+
+---
+layout: default
+title: Snakes
+description: ceramics, snakes, sculpture, herpitle, Harry_hands_ceramics, Harry Wojtas, Portland Oregon
+extra_css: |
+  body { margin: 0; padding: 0; }
+  .container { margin: 0; padding: 0; }
+---
+<div class="container" style="background-color: #f0f0f0; padding: 0;">
+  <img src="{{ '/Images/ceramics/Portland/heads.JPG' | relative_url }}" alt="Ceramic heads on display" class="hero-img" style="border-radius: 0;">
+</div>
+
+<div class="container about-layout">
+  <div class="about-text">
+     <p>
+      Welcome to my art website!
+    </p>

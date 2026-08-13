@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {% if page.extra_css %}<style>{{ page.extra_css }}</style>{% endif %}
 </head>
-<body>
+<body{% if page.bg_color %} style="background-color: {{ page.bg_color }};"{% endif %}>
   {% include nav.html %}
 
   {{ content }}
