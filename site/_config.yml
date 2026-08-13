@@ -1,0 +1,14 @@
+title: Harry Wojtas
+description: Ceramics, block prints, and photography by Harry Wojtas
+url: ""
+baseurl: ""
+
+# GitHub Pages builds this automatically with Jekyll — no build step needed on your end.
+# Just push to the repo and the site rebuilds.
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md

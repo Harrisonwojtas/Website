@@ -1,0 +1,20 @@
+<header>
+  <div class="site-title"><a href="{{ '/index.html' | relative_url }}">Harry Wojtas</a></div>
+  <nav>
+    <a href="{{ '/about.html' | relative_url }}" {% if page.url == '/about.html' %}class="active"{% endif %}>About</a>
+    <a href="{{ '/pottery.html' | relative_url }}" {% if page.url == '/pottery.html' %}class="active"{% endif %}>Pottery</a>
+    <a href="{{ '/block-print.html' | relative_url }}" {% if page.url == '/block-print.html' %}class="active"{% endif %}>Block Print</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Photos ▾</button>
+      <div class="dropdown-content">
+        <a href="{{ '/bigplaces.html' | relative_url }}">Grand Places</a>
+        <a href="{{ '/peru.html' | relative_url }}">Peru</a>
+        <a href="{{ '/birds.html' | relative_url }}">Birds</a>
+      </div>
+    </div>
+
+    <a href="{{ '/cv.html' | relative_url }}" {% if page.url == '/cv.html' %}class="active"{% endif %}>CV</a>
+    <a href="{{ '/contact.html' | relative_url }}" {% if page.url == '/contact.html' %}class="active"{% endif %}>Contact</a>
+  </nav>
+</header>
