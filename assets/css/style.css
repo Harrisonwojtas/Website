@@ -3,17 +3,21 @@
    Change colors, fonts, and spacing for the whole site from right here.
    ========================================================================== */
 :root {
-  --color-bg: #f9f9f9;
-  --color-surface: #ffffff;
-  --color-text: #333333;
-  --color-muted: #777777;
-  --color-accent: #333333;      /* nav links, headings */
+  --color-bg: #397C5A;          /* outer margins */
+  --color-surface: #FDFBD4;     /* cream panels: content column + dropdown */
+  --color-text: #000000;        /* text on cream panels */
+  --color-muted: #4a4a4a;
+  --color-accent: #05472A;      /* dark green - hero border, link hover, dropdown hover bg */
+  --color-link: #0F5E6E;        /* teal - links inside the cream content column */
+  --color-panel: #6E1F0F;       /* maroon - header, footer */
+  --color-panel-text: #FFB0A1;  /* salmon - text/links on maroon panels */
+  --color-panel-text-hover: #FDFBD4; /* cream - hover state on maroon panels */
   --color-border: #dddddd;
 
   --font-heading: Georgia, 'Times New Roman', serif;
   --font-body: Georgia, 'Times New Roman', serif;
 
-  --max-width: 1100px; /*Orginally this was 800 px */
+  --max-width: 1100px;
   --radius: 10px;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -37,10 +41,14 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-heading);
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 a {
+  color: var(--color-link);
+}
+
+a:hover {
   color: var(--color-accent);
 }
 
@@ -54,8 +62,9 @@ img {
    ========================================================================== */
 header {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 2rem 20px 1rem;
+  background-color: var(--color-panel);
 }
 
 .site-title {
@@ -67,18 +76,18 @@ header {
 }
 .site-title a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-panel-text);
 }
 
 nav {
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-panel-text);
   margin: 0 15px;
   font-weight: bold;
   padding-bottom: 2px;
@@ -86,6 +95,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
+  color: var(--color-panel-text-hover);
   text-decoration: underline;
 }
 
@@ -99,7 +109,7 @@ nav a.active {
   background: none;
   border: none;
   font: inherit;
-  color: var(--color-text);
+  color: var(--color-panel-text);
   cursor: pointer;
   font-weight: bold;
   margin: 0 15px;
@@ -129,7 +139,8 @@ nav a.active {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--color-bg);
+  background-color: var(--color-accent);
+  color: var(--color-panel-text-hover);
 }
 
 .dropdown:hover .dropdown-content,
@@ -144,6 +155,8 @@ nav a.active {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 40px 20px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
 }
 
 .container-fullscreen {
@@ -171,6 +184,43 @@ nav a.active {
   width: 100%;
   border-radius: var(--radius);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Centered image sitting between paragraphs in a flowing article */
+.content-img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Paragraph with an image beside it (image on the right by default) */
+.text-image-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin: 2rem 0;
+}
+
+.text-image-row p {
+  flex: 1 1 55%;
+}
+
+.text-image-row img {
+  flex: 1 1 35%;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.text-image-row.image-left {
+  flex-direction: row-reverse;
 }
 
 /* ==========================================================================
@@ -205,6 +255,7 @@ nav a.active {
   display: block;
   margin: 0 auto;
   border-radius: var(--radius);
+  border: 4px solid var(--color-accent);
 }
 
 /* ==========================================================================
@@ -273,8 +324,17 @@ nav a.active {
    ========================================================================== */
 footer {
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin: 0;
+  padding: 20px;
   font-size: 0.9em;
-  color: var(--color-muted);
+  background-color: var(--color-panel);
+  color: var(--color-panel-text);
+}
+
+footer a {
+  color: var(--color-panel-text);
+}
+
+footer a:hover {
+  color: var(--color-panel-text-hover);
 }
