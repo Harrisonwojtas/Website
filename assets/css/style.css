@@ -13,7 +13,7 @@
   --font-heading: Georgia, 'Times New Roman', serif;
   --font-body: Georgia, 'Times New Roman', serif;
 
-  --max-width: 800px;
+  --max-width: 1100px; /*Orginally this was 800 px */
   --radius: 10px;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 0 20px rgba(0, 0, 0, 0.5);
